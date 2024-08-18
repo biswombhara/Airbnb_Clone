@@ -1,0 +1,121 @@
+<style>
+  #user-icon{
+    display: none;
+  }
+  .ui-1{
+    margin-right: 0.5rem;
+  }
+  .n-end{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-right: -1rem;
+  }
+  .ui-2 {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+  }
+  .ui {
+    border: 1px solid #b1b1b1;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    transition: all 0.25s ease;
+  }
+  .ui:hover{
+    box-shadow: 0 2px 4px 0 rgb(125, 125, 125);
+  }
+  .li{
+    padding: 0.5rem 0.85rem;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+  }
+  .li:hover{
+    background-color: #cdcdcd;
+  }
+  .li,.ui,.user-icon,.language-icon{
+    cursor: pointer;
+  }
+</style>
+<nav class="navbar nav-a navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+    <div class="container-fluid">
+      <div class="logo-div">
+        <a href="/listings">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg" alt="logo" class="navbar-logo"> 
+        </a>
+      </div> 
+      <div class="container-fluid n-end">
+          <div class="home">
+            <a href="/listings/new" class="home-airbnb list-group-item list-group-item-action">Airbnb your home</a>
+          </div>
+          <div class="form-check form-switch li">
+            <input class="form-check-input switch-radio" type="checkbox" role="switch" id="user-icon">
+              <label class="form-check-label" for="lang-icon">
+                <div class="language-icon">
+                  <i class="fa-solid fa-globe"></i> 
+                </div>
+              </label>            
+          </div>
+          <div class="form-check form-switch ui">
+              <input class="form-check-input switch-radio" type="checkbox" role="switch" id="user-icon">
+              <label class="form-check-label" for="user-icon">  
+                <div class="user-icon">
+                  <i class="fa-solid fa-bars user-icon ui-1"></i>
+                  <i class="fa-regular fa-user user-icon ui-2"></i>
+                </div> 
+              </label>
+          </div>          
+        </div>
+      </div>
+        <div id="lg">
+          <div class="list-group list_group">
+              <% if(!currUser){ %>
+                  <a href="/signup" class="list-group-item list-group-item-action"><b>Sign up</b></a>
+                  <a href="/login" class="list-group-item list-group-item-action">Log in</a>
+                  <div class="bb"></div>
+              <% } %>
+              <% if(currUser){ %>
+                  <a href="/logout" class="list-group-item list-group-item-action">
+                    Log out
+                  </a>
+                  <div class="bb"></div>
+              <% } %>
+            <a href="/listings/new" class="list-group-item list-group-item-action">Airbnb your home</a>
+            <a href="#" class="list-group-item list-group-item-action">Help Center</a>
+          </div>
+      </div>
+    </div>
+</nav>
+
+
+<!-- Bottom Nav-Bar -->
+  
+<ul class="nav justify-content-center nav-b">
+  <li class="nav-item">
+    <a class="nav-link" href="/listings/new">
+      <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+      <p style="font-size: 0.75rem;  margin: 0;">Explore</p>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/signup">
+      <i class="fa-solid fa-user-plus fa-xl"></i>
+      <p style="font-size: 0.75rem;  margin: 0;">Sign up</p>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/login">
+      <i class="fa-solid fa-circle-user fa-xl"></i>
+      <p style="font-size: 0.75rem;  margin: 0;">Sign in</p>
+    </a>
+  </li>
+</ul>
+
+
+
+
+  
+    

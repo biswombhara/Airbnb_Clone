@@ -1,0 +1,121 @@
+<style>
+    .list>ul, .foot-l>ul{
+        list-style: none;
+    }
+    .list{
+        display: flex;
+    }
+    .list ul li{
+        margin-top: 0.5rem;
+        font-size: 14px;
+    }
+    .list ul li a, .foot-l ul li a{
+        text-decoration: none;
+        color: black;
+        opacity: 0.9;
+    }
+    .list ul li a:hover{
+        text-decoration: underline;
+    }
+    .hr{
+        border-top:  2px solid #e0e0e0;
+        width: 100vw;
+        margin-bottom: 1rem;
+    }
+    .foot{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .foot-l ul li{
+        display: flex;
+        margin-right: 0.5rem;
+    }
+    .foot-l ul, .foot-r{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foot-r div{
+        margin-left: 1.5rem;
+    }
+    .br{
+        display: none;
+    }
+    @media (max-width: 756px) { 
+        .foot{
+            margin: 0 0 4rem 0;
+            font-size: 0.8rem;
+        }
+        .list ul{
+            padding: 0;
+        }
+    .foot-r{
+        margin-left: 0.5rem;
+        justify-content: center;
+        width: 100%;
+    }
+    }
+
+</style>
+
+<footer class="border-top">
+    <div class="list">
+        <ul>
+            <li><b>Support</b></li>
+            <li><a href="">Help Centre</a></li>
+            <li><a href="">AirCover</a></li>
+            <li><a href="">Anti-discrimination</a></li>
+            <li><a href="">Disability support</a></li>
+            <li><a href="">Cancellation options</a></li>
+            <li><a href="">Report neighbourhood concern</a></li>
+        </ul>
+        <ul>
+            <li><b>Hosting</b></li>
+            <li><a href="">Airbnb your home</a></li>
+            <li><a href="">AirCover for Hosts</a></li>
+            <li><a href="">Hosting resources</a></li>
+            <li><a href="">Community forum</a></li>
+            <li><a href="">Hosting responsibly</a></li>
+            <li><a href="">Join a free Hosting class</a></li>
+        </ul>
+        <ul>
+            <li><b>Airbnb</b></li>
+            <li><a href="">Newsroom</a></li>
+            <li><a href="">New features</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Investors</a></li>
+            <li><a href="">Airbnb.org emergency stays</a></li>
+        </ul>
+    </div>
+    <div class="hr"></div>
+    <div class="foot">        
+        <div class="foot-l">
+            <ul>
+                <li>&copy;Airbnb,Inc.</li>
+                <li>&#128900 <a href="">&nbsp;Privacy&nbsp;</a></li>
+                <li>&#128900 <a href="">&nbsp;Terms&nbsp;</a></li>
+                <li>&#128900 <a href="">&nbsp;Sitemap&nbsp;</a></li>
+                <li>&#128900 <a href="">&nbsp;Company details&nbsp;</a></li>
+            </ul>
+        </div>
+        <div class="foot-r">
+            <div class="language-icon">
+                <i class="fa-solid fa-globe"></i> English (IN) 
+            </div>
+            <div class="inr-icon">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <span>INR</span>
+            </div>
+            <br class="br">
+            <div class="f-social">
+                <a href="https://www.facebook.com/biswambhara.patra"><i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://x.com/biswombhara"><i class="fa-brands fa-square-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/developer_bisup/"><i class="fa-brands fa-square-instagram"></i>
+                </a>
+            </div>
+        </div>        
+    </div>
+</footer>

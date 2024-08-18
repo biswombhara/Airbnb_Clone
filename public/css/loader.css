@@ -1,0 +1,17 @@
+#loader{
+    width: 92%;
+    height: 100vh;
+    position: fixed;
+    z-index: 555555;
+    background-color: white;
+    display: flex;
+}
+
+#loader div{
+    margin: 0 auto;
+}
+
+#loader div img{
+    height: 100vh;
+    scale: 0.4;
+}

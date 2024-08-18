@@ -1,0 +1,235 @@
+
+body{
+    font-family: 'Libre Baskerville', serif;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    padding: 0;
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: rgb(56, 51, 44);
+}
+.logo-div{
+    margin-right:19vw ;
+}
+.navbar-logo{
+    height: 30px;
+}
+.searchBar{
+    scale: 0.75;
+    border: 2px solid transparent;
+    border-radius: 41px;
+    width: 35rem;
+    box-shadow: 0px 0px 9px 1px #0000008a;
+    z-index: 5000;
+    margin: 0 auto;
+}
+.Sbtn {
+border-radius: 5rem;
+height: 4rem;
+width: 11rem;
+}
+.searchip{
+border: none;
+border-radius: 41px;
+padding-left: 2rem;
+}
+.searchip:hover{
+background-color: rgb(244, 242, 242);
+}
+.searchips > .form-control:focus {
+border-color: inherit;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: #f3f3f375;
+}
+.f-social i{
+    color: rgb(0, 0, 0);
+    margin-right: 0.2rem;
+    font-size: 1.2rem;
+}
+.f-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.f-links a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 0.2rem;
+}
+.f-links a:hover{
+    text-decoration: underline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list a{
+    text-decoration: none;
+}
+.list .card img{
+    height: 19rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+.card-listing{
+    border: none;
+    margin: 1.5rem 0;
+}
+.card-title{
+    font-size: 1.5rem;
+}
+.card-body{
+    padding: 0.3rem 0;
+}
+.card-img-overlay{
+    opacity: 1;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.add-btn{
+    background-color: #fe424d;
+}
+.img-fluid{
+    width: 30rem;
+    max-height: 30rem;
+    object-fit: cover;
+}
+.btns{
+    display: flex;
+    margin-top: 1rem;
+}
+.card-body, .btns{
+    margin-left:  1rem;
+}
+
+.previewImg img{
+    width: 18vw;
+}
+.list-group{
+    width: 18rem;
+    box-shadow: 0 0 6px 0px;
+    margin-top: 2.5rem;
+}
+.list_group{
+    position: absolute;
+    left: 75vw;
+    z-index: 2;
+}
+#map { 
+    width: 86vw;
+    height: 50vh;
+}
+
+.list-group-item{
+    border: none;
+}
+#lg{
+    display: none;
+}
+.bb{
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.nav-b li a{
+    text-align: center;
+    color: #fe424d;
+}
+
+.nav-b {
+    position: sticky;
+    top: 90%;
+    z-index: 5;
+    background-color: #fff;
+    border-top: 1px solid #c9c9c9;
+    display: none;
+}
+@media only screen and (max-width: 481px){
+    .home-airbnb, .li, .nav-a{
+        display: none;
+    }
+    body{
+        padding: 0 1rem;
+    }
+    .nav-b {
+        display: flex;
+    }
+    .card-listing {
+        margin: -2rem;
+        scale: 0.8;
+    }
+    .list{
+        flex-wrap: wrap;
+    }
+    .list>ul{
+        width: auto;
+    }
+    .searchBar{
+        scale: 0.5;
+        width: auto;
+        top: 0%;
+        margin: 0 -8rem;
+        background-color: white;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 769px){
+    .home, .nav-a{
+        display: none;
+    }
+    .nav-b {
+        visibility: visible;
+    }
+    .list{
+        flex-wrap: wrap;
+    }
+    .list>ul{
+        width: 47vw;
+    }
+    body{
+        padding: 0 2rem;
+    }
+    .searchBar{
+        scale: 0.5;
+        width: auto;
+        top: 0%;
+        margin: 0 -8rem;
+        background-color: white;
+    }
+    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px){
+    .home{
+        display: none;
+    }
+    .logo-div{
+        margin-right: 0;
+    }
+    body{
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .home{
+        display: none;
+    }
+    .list>ul {
+        width: 20rem;
+    }
+}
