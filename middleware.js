@@ -32,7 +32,7 @@ module.exports.isOwner = async(req,res,next) => {
 
 module.exports.validateListing=(req,res,next) => {
   if (!req.body.listing) {
-    throw new ExpressErrors(400, "Listing data is missing.");
+    throw new ExpressError(400, "Listing data is missing.");
   }
     let {error }= listingSchema.validate(req.body);
     if(error){
@@ -41,7 +41,7 @@ module.exports.validateListing=(req,res,next) => {
     }else{
       next();
     }
-  }
+}
 
   module.exports.validateReview = (req,res,next) => {
     let {error }= reviewSchema.validate(req.body);

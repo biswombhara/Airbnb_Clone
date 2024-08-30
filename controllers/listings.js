@@ -5,18 +5,19 @@ const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index= (async (req,res)=>{
     let search  = req.query.data;
-    console.log(search)
     let type = req.query.q;
     let allListings = await Listing.find().populate("reviews");
     if(search){
         type=search;   
     }
     let filterListing = await Listing.find({filter:type});
-    res.render("listings/index.ejs",{allListings,type});
+    let R = req.route.path
+    res.render("listings/index.ejs",{allListings,type,R});
   });
 
 module.exports.newListing = (req, res) => {
-    res.render("listings/new.ejs");
+  let R = req.route.path
+    res.render("listings/new.ejs",{R});
   }
 
   module.exports.viewListing = async (req, res) => {
@@ -39,7 +40,7 @@ module.exports.newListing = (req, res) => {
     })
     .send();
     listing.geometry = response.body.features[0].geometry;
-    res.render(`listings/show.ejs`,{ listing });
+    res.render(`listings/show.ejs`,{ listing, req });
   }
 
   module.exports.createNewListing = async (req, res, next) => {  
@@ -56,7 +57,7 @@ module.exports.newListing = (req, res) => {
     newListing.geometry = response.body.features[0].geometry;
     await newListing.save();
     req.flash("success","New List created...");
-    res.redirect("/listings");
+    res.redirect("/listings",{req});
   }
 
   module.exports.editListing = async (req, res) => {
@@ -68,7 +69,7 @@ module.exports.newListing = (req, res) => {
     }
     let orgImage = listing.image.url;
     orgImage = orgImage.replace("/upload", "/upload/h_250")
-    res.render("listings/edit.ejs",{listing, orgImage});
+    res.render("listings/edit.ejs",{listing, orgImage, req});
   }
 
   module.exports.updateListing = async (req, res) => {
@@ -82,12 +83,12 @@ module.exports.newListing = (req, res) => {
       await listing.save();
     }  
     req.flash("success","List updated...");
-    res.redirect(`/listings/${id}`);
+    res.redirect(`/listings/${id}`,{req});
   }
 
   module.exports.deleteListing = async (req, res) => {
     let {id} = req.params;
     await Listing.findByIdAndDelete(id);
     req.flash("success","List deleted...");
-    res.redirect("/listings");
+    res.redirect("/listings",{req});
   }

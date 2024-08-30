@@ -1,7 +1,6 @@
 
 body{
     font-family: 'Libre Baskerville', serif;
-    padding: 0 5rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,6 +13,7 @@ body{
 .navbar{
     height: 5rem;
     background-color: rgb(56, 51, 44);
+    padding: 0 5rem;
 }
 .logo-div{
     margin-right:19vw ;
@@ -152,13 +152,113 @@ footer{
 
 .nav-b {
     position: sticky;
-    top: 90%;
+    top: 92%;
     z-index: 5;
     background-color: #fff;
     border-top: 1px solid #c9c9c9;
     display: none;
 }
+
+/* Filters */
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: sticky; 
+    top: 11%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0px 1px #8888886b;
+    padding: 0 5rem;
+  }
+  .filter a{
+    text-decoration: none;
+    color: #000;
+  } 
+  .filter a i{
+    font-size: 1.5rem;
+  } 
+  .filter p{
+    font-size: 13px;
+  } 
+  .filter{
+    opacity: 0.7;
+    text-align: center;
+    margin-right: 1.5rem;
+    list-style: none;
+  }
+  /* .filter:hover{
+    opacity: 1;
+    font-weight: 800;
+  } */
+  .filter a:visited{
+    
+    border-bottom: 3px solid black;
+  }
+  
+  .tax-info{
+    display: none;
+  }
+  .filter-btn{
+    padding: 0.8rem;
+    border: 1px solid #00000036;
+    background-color: white;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+  }
+  .tax-switch{
+    padding: 0.75rem 4.5rem 0.75rem 0.8rem !important;
+    border: 1px solid #00000036;
+    background-color: white;
+    font-weight: 550;
+    border-radius: 1.1rem;
+    height: fit-content;
+  }
+  .switch-radio{
+    font-size: 1.5rem;
+    margin-top: -0.05rem;
+  }
+  .fa-sliders{
+    margin: 0 0.5rem;
+  }
+  .tax-label{
+    font-size: 0.85rem;
+  }
+  .filter-icon{
+    display: flex;
+    overflow: hidden;
+    width: 61%;
+    overflow-x: scroll;
+  }
+  .filter-icon::-webkit-scrollbar{
+    display: none;
+  }
+  .arrL, .arrR{
+    transition: all 0.2s ease-in-out;
+  }
+  .arrL:hover, .arrR:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 3px #000000c2;
+  }
+  .arr{
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #0000005c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+  }
+ .h-{
+  height: 25px;
+ }
+
 @media only screen and (max-width: 481px){
+    .filters{
+      padding: 0rem;
+    }
     .home-airbnb, .li, .nav-a{
         display: none;
     }
@@ -184,15 +284,19 @@ footer{
         top: 0%;
         margin: 0 -8rem;
         background-color: white;
+        margin-top: -5rem;
     }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 769px){
+    .filters{
+      padding: 0rem;
+    }
     .home, .nav-a{
         display: none;
     }
     .nav-b {
-        visibility: visible;
+        display: flex;
     }
     .list{
         flex-wrap: wrap;
@@ -203,32 +307,36 @@ footer{
     body{
         padding: 0 2rem;
     }
-    .searchBar{
+    .searchBarr{
         scale: 0.5;
         width: auto;
         top: 0%;
         margin: 0 -8rem;
         background-color: white;
+        margin-top: -5rem;
     }
+    .home{
+        display: none;
+    }
+    /* .container{
+        margin-top: -5rem;
+    } */
     
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1280px){
-    .home{
-        display: none;
-    }
     .logo-div{
         margin-right: 0;
     }
     body{
         padding: 0 2rem;
     }
-}
-
-@media only screen and (min-width: 1280px){
     .home{
         display: none;
     }
+}
+
+@media only screen and (min-width: 1280px){
     .list>ul {
         width: 20rem;
     }

@@ -57,3 +57,24 @@ user_icon.addEventListener("click",()=>{
     lg.style.display = "";
   }
 });
+
+//Search bar & Filter
+if(window.location.pathname != "/listings"){
+  document.querySelector(".searchBar").style.display = "none";
+  document.querySelector(".filters").style.display = "none";
+}
+
+//Filter icon scrolling effect
+let leftA = document.querySelector(".arrL");
+  let rightA = document.querySelector(".arrR");
+  let filterIcon = document.querySelector(".filter-icon");
+
+  leftA.addEventListener("click",()=>{
+    filterIcon.style.scrollBehaviour = "smooth"
+    filterIcon.scrollLeft -= 50;
+  });
+
+  rightA.addEventListener("click",()=>{
+    filterIcon.style.scrollBehaviour = "smooth"
+    filterIcon.scrollLeft += 50;
+  });
